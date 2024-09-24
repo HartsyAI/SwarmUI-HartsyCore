@@ -8,7 +8,7 @@ namespace Hartsy.Extensions.Core
     {
         public override void OnFirstInit()
         {
-            Logs.Debug("OpenWebUIExtension started.");
+            Logs.Debug("HartsyCoreExtension started.");
             ScriptFiles.Add("Assets/hartsyCore.js");
         }
 
