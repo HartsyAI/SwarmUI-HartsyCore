@@ -2,7 +2,7 @@
 
 namespace Hartsy.Extensions.Core.WebAPI
 {
-    [API.APIClass("API routes related to OpenWebUIExtension")]
+    [API.APIClass("API routes related to HartsyCoreExtension")]
     public class HartsyCoreAPI
     {
         public static void Register()

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hartsy Tabs</title>
+    <style>
+        .tab-pane {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+        .github-logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .banner-image {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs" role="tablist" id="usertablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active translate" data-bs-toggle="tab" href="#MagicPrompt" id="magicprompttabbutton" aria-selected="true" role="tab">MagicPrompt</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link translate" data-bs-toggle="tab" href="#UniversalTab" id="universaltabbutton" aria-selected="false" tabindex="-1" role="tab">UniversalTab</a>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-3" id="hartsyCoreContent">
+        <!-- MagicPrompt Tab Content -->
+        <div class="tab-pane fade show active" id="MagicPrompt" role="tabpanel" aria-labelledby="magicprompttabbutton">
+            <div class="center-content">
+                <img src="banner-placeholder.png" alt="Banner Image" class="banner-image">
+                <h5 class="card-title">Welcome to the MagicPrompt Tab</h5>
+                <p>This extension helps you generate magic prompts with ease.</p>
+                <a href="https://github.com/kalebbroo/SwarmUI-MagicPromptExtension" target="_blank">
+                    <img src="github-logo.png" alt="GitHub Logo" class="github-logo">
+                </a>
+                <p><a href="https://github.com/kalebbroo/SwarmUI-MagicPromptExtension" target="_blank">Check out the GitHub repository</a></p>
+            </div>
+        </div>
+
+        <!-- UniversalTab Content -->
+        <div class="tab-pane fade" id="UniversalTab" role="tabpanel" aria-labelledby="universaltabbutton">
+            <div class="center-content">
+                <img src="banner-placeholder.png" alt="Banner Image" class="banner-image">
+                <h5 class="card-title">Welcome to the UniversalTab</h5>
+                <p>This tab covers universal features of the Hartsy extension.</p>
+                <a href="https://github.com/kalebbroo/SwarmUI-UniversalTabExtension" target="_blank">
+                    <img src="github-logo.png" alt="GitHub Logo" class="github-logo">
+                </a>
+                <p><a href="https://github.com/kalebbroo/SwarmUI-UniversalTabExtension" target="_blank">Check out the GitHub repository</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="hartsyCore.js"></script>
+</body>
+</html>
