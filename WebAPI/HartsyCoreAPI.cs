@@ -7,7 +7,7 @@ namespace Hartsy.Extensions.Core.WebAPI
     {
         public static void Register()
         {
-            //API.RegisterAPICall(PhoneHomeAsync, true);
+            API.RegisterAPICall(CoreUtils.CheckValidURL);
         }
     }
 }
