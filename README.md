@@ -44,7 +44,7 @@ Before you install the HartsyCore Extension, ensure that you have the following 
 To install the HartsyCore Extension, follow these steps:
 
 1. Close your SwarmUI instance and navigate to the `SwarmUI/src/Extensions` directory.
-2. Clone the HartsyCore repository there. Open cmd and `cd` to the directory above and run `git clone https://github.com/your-repo/SwarmUI-HartsyCore`.
+2. Clone the HartsyCore repository there. Open cmd and `cd` to the directory above and run `git clone https://github.com/HartsyAI/SwarmUI-HartsyCore`.
 3. Make sure you have run `update-windows.bat` or `update-linuxmac.sh` to recompile SwarmUI. This only needs to be done on first install.
 4. Restart your SwarmUI instance and refresh your browser. You should now have a new tab called "Hartsy".
 
