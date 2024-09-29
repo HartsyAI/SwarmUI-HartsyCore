@@ -1,7 +1,7 @@
 # SwarmUI HartsyCore Extension
 ===========================================================================
 
-![HartsySwarm](./Images/HartsySwarm.webp)
+![HartsySwarm](https://raw.githubusercontent.com/HartsyAI/SwarmUI-MagicPromptExtension/refs/heads/master/Images/HartsySwarm.webp)
 
 ## Table of Contents
 -----------------
