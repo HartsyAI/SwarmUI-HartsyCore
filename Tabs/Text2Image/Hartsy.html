@@ -129,7 +129,7 @@
             fill: #fff;
         }
 
-        /* Container for tab content with bottom padding to allow scrolling */
+        /* Container for tab content */
         .tab-content-container {
             text-align: center;
             padding: 20px;
@@ -137,7 +137,11 @@
             max-width: 1400px; /* Full width on desktop screens */
             margin: 0 auto;
             gap: 30px; /* Add gap between containers */
-            padding-bottom: 100px; /* Space at the bottom for scrolling */
+        }
+
+        /* Padding for the end of the content */
+        .end-padding {
+            padding-bottom: 100px; /* Extra space after Hartsy AI button */
         }
 
         /* Responsive adjustments */
@@ -245,6 +249,9 @@
 
             <!-- Hartsy Team button - smaller and width matching text -->
             <div class="hartsy-team" onclick="openHartsyLink()">Hartsy AI</div>
+
+            <!-- Add padding after the last element -->
+            <div class="end-padding"></div>
         </div>
 
         <!-- UniversalTab Content -->
@@ -289,6 +296,9 @@
 
             <!-- Hartsy Team button - smaller and width matching text -->
             <div class="hartsy-team" onclick="openHartsyLink()">Hartsy AI</div>
+
+            <!-- Add padding after the last element -->
+            <div class="end-padding"></div>
         </div>
 
     </div>
