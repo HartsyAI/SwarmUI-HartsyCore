@@ -4,6 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hartsy Tabs</title>
+    <style>
+        /* Global font settings */
+        body {
+            font-family: Arial, sans-serif; /* Clean, serious, and elegant font */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Full width image with border radius and shadow */
+        .full-width-img {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 0px;
+            border-radius: 50px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        }
+
+        /* Main title styling with dynamic shadow */
+        .main-title {
+            font-size: 2.5rem; /* Larger size for main title */
+            font-weight: bold; /* Bold title */
+            margin-bottom: 50px;
+            color: inherit; /* Inherits surrounding color */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5); /* Dynamic shadow */
+        }
+
+        /* Description styling with dynamic shadow */
+        .description {
+            font-size: 1.1rem; /* Slightly smaller than title */
+            color: inherit; /* Matches inherited color */
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5); /* Dynamic shadow */
+        }
+
+        /* Feature list styling */
+        .feature-list {
+            list-style-type: none; /* No bullets */
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            margin: 20px ; /* Add space between boxes */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+            color: #fff; /* White text */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 150px; /* Minimum box height */
+            max-width: 600px; /* Fixed width */
+            margin: 0 auto; /* Center the boxes */
+        }
+
+        /* Feature title */
+        .feature-list h6 {
+            font-size: 1.5rem; /* Larger title */
+            font-weight: bold; /* Bold for emphasis */
+            margin: 0 0 10px 0; /* Add space below title */
+        }
+
+        /* Feature description */
+        .feature-list p {
+            font-size: 1rem; /* Slightly smaller text */
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+
+        /* Container for tab content */
+        .tab-content-container {
+            text-align: center;
+            padding: 20px;
+            max-width: 1000px; /* Control max width */
+            margin: 0 auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem; /* Adjust title size on smaller screens */
+            }
+            .description {
+                font-size: 1rem; /* Adjust description size */
+            }
+            .feature-list li {
+                max-width: 100%; /* Allow boxes to take full width */
+                padding: 15px; /* Reduce padding on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.8rem; /* Further reduce title size */
+            }
+            .description {
+                font-size: 0.9rem; /* Reduce description size */
+            }
+            .feature-list li {
+                padding: 10px; /* Further reduce padding */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -21,58 +124,80 @@
     <div class="tab-content mt-3" id="hartsyCoreContent">
         <!-- MagicPrompt Tab Content -->
         <div class="tab-pane fade show active" id="MagicPrompt" role="tabpanel" aria-labelledby="magicprompttabbutton">
-            <div style="text-align: center; padding: 20px; max-width: 600px; margin: 0 auto;">
-                <img src="https://raw.githubusercontent.com/HartsyAI/SwarmUI-MagicPromptExtension/refs/heads/master/Images/HartsySwarm.webp" alt="MagicPrompt Banner" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
-                <h5 class="card-title">Welcome to the MagicPrompt Tab</h5>
-                <p>This extension helps you generate magic prompts with ease.</p>
-                <div class="feature-list" style="list-style-type: none; padding: 0; margin: 20px 0;">
-                    <li style="margin: 10px 0; padding: 10px; background-color: var(--bs-light, #a0a0a0); border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <div class="tab-content-container">
+                
+                <!-- Full width image -->
+                <img src="https://raw.githubusercontent.com/HartsyAI/SwarmUI-MagicPromptExtension/refs/heads/master/Images/HartsySwarm.webp" 
+                     alt="MagicPrompt Banner" class="full-width-img">
+                
+                <!-- Main Title -->
+                <h5 class="main-title">Welcome to the MagicPrompt Tab</h5>
+
+                <!-- Description -->
+                <p class="description">This extension helps you generate magic prompts with ease.</p>
+
+                <!-- Feature list -->
+                <div class="feature-list">
+                    <li>
                         <h6>Generate Detailed Prompts</h6>
                         <p>Generate a rewritten prompt with more detail directly in SwarmUI.</p>
                     </li>
-                    <li style="margin: 10px 0; padding: 10px; background-color: var(--bs-light, #a0a0a0); border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                    <li>
                         <h6>Supports Multiple LLMs</h6>
                         <p>Supports local Ollama LLMs, OpenAI, and Anthropic (requires API keys).</p>
                     </li>
-                    <li style="margin: 10px 0; padding: 10px; background-color: var(--bs-light, #a0a0a0); border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                    <li>
                         <h6>Easy-to-Use Interface</h6>
                         <p>Send the rewritten prompts to the Generate tab with a simple click.</p>
                     </li>
                 </div>
-                <a href="https://github.com/HartsyAI/SwarmUI-MagicPromptExtension" target="_blank" class="btn btn-primary" style="margin-top: 20px;">Check out the GitHub repository</a>
+
+                <!-- Call to action buttons -->
+                <a href="https://github.com/HartsyAI/SwarmUI-MagicPromptExtension" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Check out the GitHub repository</a>
                 <a href="https://github.com/HartsyAI/SwarmUI-MagicPromptExtension" target="_blank">
                     <img src="https://github.com/favicon.ico" alt="GitHub Logo" style="width: 50px; height: 50px; margin-top: 10px;">
                 </a>
             </div>
         </div>
+    </div>
 
-        <!-- UniversalTab Content -->
-        <div class="tab-pane fade" id="UniversalTab" role="tabpanel" aria-labelledby="universaltabbutton">
-            <div style="text-align: center; padding: 20px; max-width: 600px; margin: 0 auto;">
-                <img src="https://raw.githubusercontent.com/HartsyAI/SwarmUI-MagicPromptExtension/refs/heads/master/Images/HartsySwarm.webp" alt="UniversalTab Banner" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
-                <h5 class="card-title">Welcome to the UniversalTab</h5>
-                <p>This tab allows you to add any webpage to your SwarmUI interface.</p>
-                <div class="feature-list" style="list-style-type: none; padding: 0; margin: 20px 0;">
-                    <li style="margin: 10px 0; padding: 10px; background-color: var(--bs-light, #a0a0a0); border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+    <!-- UniversalTab Content -->
+        <div class="tab-pane fade" id="UniversalTab" role="tabpanel" aria-labelledby="UniversalTab-button">
+            <div class="tab-content-container">
+        
+                <!-- Full width image -->
+                <img src="https://raw.githubusercontent.com/HartsyAI/SwarmUI-MagicPromptExtension/refs/heads/master/Images/HartsySwarm.webp" 
+                     alt="UniversalTab Banner" class="full-width-img">
+        
+             <!-- Main Title -->
+                <h5 class="main-title">Welcome to the UniversalTab</h5>
+
+                <!-- Description -->
+                <p class="description">This tab allows you to add any webpage to your SwarmUI interface.</p>
+
+                <!-- Feature list -->
+                <div class="feature-list">
+                    <li>
                         <h6>Create an iFrame Tab</h6>
-                        <p>Display any webpage in a new tab within SwarmUI.</p>
+                           <p>Display any webpage in a new tab within SwarmUI.</p>
                     </li>
-                    <li style="margin: 10px 0; padding: 10px; background-color: var(--bs-light, #a0a0a0); border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                    <li>
                         <h6>Flexible Integration</h6>
                         <p>Integrate external content seamlessly into your SwarmUI interface.</p>
                     </li>
-                    <li style="margin: 10px 0; padding: 10px; background-color: var(--bs-light, #a0a0a0); border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                    <li>
                         <h6>Current Limitations</h6>
                         <p>Currently supports only one extra tab, and it does not persist across refreshes or restarts.</p>
                     </li>
                 </div>
-                <a href="https://github.com/HartsyAI/SwarmUI-UniversalTabExtension" target="_blank" class="btn btn-primary" style="margin-top: 20px;">Check out the GitHub repository</a>
-                <a href="https://github.com/HartsyAI/SwarmUI-UniversalTabExtension" target="_blank">
-                    <img src="https://github.com/favicon.ico" alt="GitHub Logo" style="width: 50px; height: 50px; margin-top: 10px;">
-                </a>
-            </div>
-        </div>
+
+        <!-- Call to action buttons -->
+        <a href="https://github.com/HartsyAI/SwarmUI-UniversalTabExtension" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Check out the GitHub repository</a>
+        <a href="https://github.com/HartsyAI/SwarmUI-UniversalTabExtension" target="_blank">
+            <img src="https://github.com/favicon.ico" alt="GitHub Logo" style="width: 50px; height: 50px; margin-top: 10px;">
+        </a>
     </div>
+</div>
 
     <script src="hartsyCore.js"></script>
 </body>
