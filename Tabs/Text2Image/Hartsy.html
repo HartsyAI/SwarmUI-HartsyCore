@@ -7,7 +7,7 @@
     <style>
         /* Global font settings */
         body {
-            font-family: Arial, sans-serif; /* Clean, serious, and elegant font */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -16,97 +16,176 @@
         .full-width-img {
             width: 100%; /* Full width */
             height: auto; /* Maintain aspect ratio */
-            margin-bottom: 0px;
-            border-radius: 50px; /* Rounded corners */
+            margin-bottom: 20px;
+            border-radius: 20px; /* Rounded corners */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
         }
 
         /* Main title styling with dynamic shadow */
         .main-title {
-            font-size: 2.5rem; /* Larger size for main title */
-            font-weight: bold; /* Bold title */
-            margin-bottom: 50px;
-            color: inherit; /* Inherits surrounding color */
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5); /* Dynamic shadow */
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: inherit;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         /* Description styling with dynamic shadow */
         .description {
-            font-size: 1.1rem; /* Slightly smaller than title */
-            color: inherit; /* Matches inherited color */
+            font-size: 1.1rem;
+            color: inherit;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5); /* Dynamic shadow */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         /* Feature list styling */
         .feature-list {
-            list-style-type: none; /* No bullets */
+            list-style-type: none;
             padding: 0;
             margin: 20px 0;
         }
 
         .feature-list li {
-            margin: 20px ; /* Add space between boxes */
+            margin: 20px 0; /* Add space between boxes */
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
             border-radius: 20px; /* Rounded corners */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
-            color: #fff; /* White text */
+            color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: 150px; /* Minimum box height */
-            max-width: 600px; /* Fixed width */
+            min-height: 150px;
+            width: 100%; /* Full width for large screens */
+            max-width: 1400px; /* Wide enough for large screens */
             margin: 0 auto; /* Center the boxes */
         }
 
         /* Feature title */
         .feature-list h6 {
             font-size: 1.5rem; /* Larger title */
-            font-weight: bold; /* Bold for emphasis */
-            margin: 0 0 10px 0; /* Add space below title */
+            font-weight: bold;
+            margin: 0 0 10px 0;
         }
 
         /* Feature description */
         .feature-list p {
-            font-size: 1rem; /* Slightly smaller text */
-            margin-bottom: 0; /* Remove bottom margin */
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* GitHub repo link styling (Same style as feature boxes) */
+        .github-repo-link {
+            background-color: rgba(0, 0, 0, 0.5); /* Same semi-transparent dark background */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            max-width: 400px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow similar to containers */
+            text-decoration: none;
+            display: flex; /* Make the link container flex for alignment */
+            align-items: center; /* Center icon and text vertically */
+            justify-content: center; /* Center content horizontally */
+            gap: 10px; /* Add space between icon and text */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover effect for GitHub repo link */
+        .github-repo-link:hover {
+            transform: scale(1.05); /* Slightly increase size on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More intense shadow on hover */
+        }
+
+        /* Hartsy Team button - smaller size, adjusted width */
+        .hartsy-team {
+            background-color: rgba(0, 0, 0, 0.5); /* Same dark background */
+            color: #fff;
+            text-align: center;
+            padding: 10px 15px; /* Smaller padding */
+            border-radius: 15px; /* Rounded corners */
+            font-size: 1rem; /* Smaller font size */
+            font-weight: bold;
+            max-width: fit-content; /* Width matches the text */
+            margin: 15px auto; /* Centered, smaller margin */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Same box shadow */
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover effect for Hartsy Team button */
+        .hartsy-team:hover {
+            transform: scale(1.05); /* Slightly increase size on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More intense shadow on hover */
+        }
+
+        /* GitHub Icon */
+        .github-icon {
+            width: 25px;
+            height: 25px;
+            fill: #fff;
         }
 
         /* Container for tab content */
         .tab-content-container {
             text-align: center;
             padding: 20px;
-            max-width: 1000px; /* Control max width */
+            width: 100%;
+            max-width: 1400px; /* Full width on desktop screens */
             margin: 0 auto;
+            gap: 30px; /* Add gap between containers */
         }
 
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             .main-title {
-                font-size: 2rem; /* Adjust title size on smaller screens */
+                font-size: 2.2rem;
             }
             .description {
-                font-size: 1rem; /* Adjust description size */
+                font-size: 1rem;
+            }
+            .feature-list li {
+                max-width: 90%; /* Scale down the boxes */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            .description {
+                font-size: 1rem;
             }
             .feature-list li {
                 max-width: 100%; /* Allow boxes to take full width */
-                padding: 15px; /* Reduce padding on smaller screens */
+                padding: 15px;
+            }
+            .full-width-img {
+                width: 100%; /* Full width on smaller screens */
             }
         }
 
         @media (max-width: 480px) {
             .main-title {
-                font-size: 1.8rem; /* Further reduce title size */
+                font-size: 1.8rem;
             }
             .description {
-                font-size: 0.9rem; /* Reduce description size */
+                font-size: 0.9rem;
             }
             .feature-list li {
-                padding: 10px; /* Further reduce padding */
+                padding: 10px;
             }
         }
     </style>
+    <script>
+        /* Make the Hartsy Team button clickable */
+        function openHartsyLink() {
+            window.open('https://github.com/HartsyAI', '_blank');
+        }
+    </script>
 </head>
 <body>
 
@@ -122,6 +201,7 @@
 
     <!-- Tab Content -->
     <div class="tab-content mt-3" id="hartsyCoreContent">
+        
         <!-- MagicPrompt Tab Content -->
         <div class="tab-pane fade show active" id="MagicPrompt" role="tabpanel" aria-labelledby="magicprompttabbutton">
             <div class="tab-content-container">
@@ -152,24 +232,29 @@
                     </li>
                 </div>
 
-                <!-- Call to action buttons -->
-                <a href="https://github.com/HartsyAI/SwarmUI-MagicPromptExtension" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Check out the GitHub repository</a>
-                <a href="https://github.com/HartsyAI/SwarmUI-MagicPromptExtension" target="_blank">
-                    <img src="https://github.com/favicon.ico" alt="GitHub Logo" style="width: 50px; height: 50px; margin-top: 10px;">
+                <!-- Call to action buttons (Now a styled container with hover animation and GitHub SVG icon) -->
+                <a href="https://github.com/HartsyAI/SwarmUI-MagicPromptExtension" target="_blank" class="github-repo-link">
+                    <!-- GitHub SVG Icon -->
+                    <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.799 8.207 11.385.6.111.793-.261.793-.579 0-.286-.01-1.043-.016-2.049-3.338.725-4.042-1.613-4.042-1.613-.546-1.387-1.332-1.757-1.332-1.757-1.09-.745.083-.73.083-.73 1.204.084 1.837 1.237 1.837 1.237 1.07 1.834 2.808 1.304 3.492.996.109-.775.418-1.304.761-1.604-2.665-.303-5.467-1.333-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.304-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.004-.404c1.02.005 2.048.137 3.004.404 2.292-1.552 3.3-1.23 3.3-1.23.654 1.653.242 2.872.118 3.176.77.84 1.236 1.911 1.236 3.221 0 4.61-2.805 5.625-5.478 5.922.43.37.814 1.1.814 2.22 0 1.606-.015 2.898-.015 3.293 0 .321.191.696.801.577C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    Check out the GitHub repository
                 </a>
             </div>
-        </div>
-    </div>
 
-    <!-- UniversalTab Content -->
+            <!-- Hartsy Team button - smaller and width matching text -->
+            <div class="hartsy-team" onclick="openHartsyLink()">Hartsy AI</div>
+        </div>
+
+        <!-- UniversalTab Content -->
         <div class="tab-pane fade" id="UniversalTab" role="tabpanel" aria-labelledby="UniversalTab-button">
             <div class="tab-content-container">
-        
+                
                 <!-- Full width image -->
                 <img src="https://raw.githubusercontent.com/HartsyAI/SwarmUI-MagicPromptExtension/refs/heads/master/Images/HartsySwarm.webp" 
                      alt="UniversalTab Banner" class="full-width-img">
-        
-             <!-- Main Title -->
+                
+                <!-- Main Title -->
                 <h5 class="main-title">Welcome to the UniversalTab</h5>
 
                 <!-- Description -->
@@ -179,7 +264,7 @@
                 <div class="feature-list">
                     <li>
                         <h6>Create an iFrame Tab</h6>
-                           <p>Display any webpage in a new tab within SwarmUI.</p>
+                        <p>Display any webpage in a new tab within SwarmUI.</p>
                     </li>
                     <li>
                         <h6>Flexible Integration</h6>
@@ -191,13 +276,21 @@
                     </li>
                 </div>
 
-        <!-- Call to action buttons -->
-        <a href="https://github.com/HartsyAI/SwarmUI-UniversalTabExtension" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Check out the GitHub repository</a>
-        <a href="https://github.com/HartsyAI/SwarmUI-UniversalTabExtension" target="_blank">
-            <img src="https://github.com/favicon.ico" alt="GitHub Logo" style="width: 50px; height: 50px; margin-top: 10px;">
-        </a>
+                <!-- Call to action buttons (Now a styled container with hover animation and GitHub SVG icon) -->
+                <a href="https://github.com/HartsyAI/SwarmUI-UniversalTabExtension" target="_blank" class="github-repo-link">
+                    <!-- GitHub SVG Icon -->
+                    <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.799 8.207 11.385.6.111.793-.261.793-.579 0-.286-.01-1.043-.016-2.049-3.338.725-4.042-1.613-4.042-1.613-.546-1.387-1.332-1.757-1.332-1.757-1.09-.745.083-.73.083-.73 1.204.084 1.837 1.237 1.837 1.237 1.07 1.834 2.808 1.304 3.492.996.109-.775.418-1.304.761-1.604-2.665-.303-5.467-1.333-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.304-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.004-.404c1.02.005 2.048.137 3.004.404 2.292-1.552 3.3-1.23 3.3-1.23.654 1.653.242 2.872.118 3.176.77.84 1.236 1.911 1.236 3.221 0 4.61-2.805 5.625-5.478 5.922.43.37.814 1.1.814 2.22 0 1.606-.015 2.898-.015 3.293 0 .321.191.696.801.577C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    Check out the GitHub repository
+                </a>
+            </div>
+
+            <!-- Hartsy Team button - smaller and width matching text -->
+            <div class="hartsy-team" onclick="openHartsyLink()">Hartsy AI</div>
+        </div>
+
     </div>
-</div>
 
     <script src="hartsyCore.js"></script>
 </body>
