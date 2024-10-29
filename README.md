@@ -6,6 +6,9 @@
 ## Table of Contents
 -----------------
 
+> [!WARNING]
+> This Extension has been archived and is removed as a dependency. This was done to be in compliance with the SwarmUI extension guidelines. If you have this installed in Swarm it can be safely removed. If you have any further questions feel free to contact the Hartsy team. 
+
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Prerequisites](#prerequisites)
